@@ -1,5 +1,6 @@
 # WebView2Example
 This repository contains two projects. The first project is the backend part, which is written in the c# programming language. The backend part consists of a plugin for Revit with a wpf window, to which webview2 connects. The frontend part is a project on the angular framework.
+
 Preview:
 
 ![image](https://github.com/laksan1/WebView2Example/blob/main/gifs/preview.gif)
@@ -14,5 +15,5 @@ Installation.
 7. Open the "WebView2Example-Backend" project
 8. Change the paths in the "build events" (project properties).
 9. Build the project (addin and dll file are copied to the addins folder).
-10. Click the button on the revision panel "WebView2Example".
+10. Click the button on the Revit panel "WebView2Example".
 11. Drag and drop rectangles in the window of the revit plugin
