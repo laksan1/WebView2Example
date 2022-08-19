@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>WebView2Example</Name>
+    <Assembly>WebView2Example.dll</Assembly>
+    <AddInId>CD65B909-A6B9-4371-A2F1-7C8E5051FE86</AddInId>
+    <FullClassName>WebView2Example.WebView2ExampleApp</FullClassName>
+    <VendorId>Laksan</VendorId>
+  </AddIn>
+</RevitAddIns>

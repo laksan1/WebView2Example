@@ -1,0 +1,24 @@
+<div class="app-header">
+    <h1>{{title}}</h1>
+    <button (click)="resizeWindow()" mat-icon-button>
+        <mat-icon  class="icon">
+            fullscreen_exit
+        </mat-icon>
+    </button>
+
+    <a href="https://github.com/laksan1?tab=repositories" target="_blank">
+        <button mat-icon-button>
+            <mat-icon svgIcon="github" class="icon">
+            </mat-icon>
+        </button>
+    </a>
+
+    <button (click)="close()" mat-icon-button>
+        <mat-icon  class="icon">
+            close
+        </mat-icon>
+    </button>
+</div>
+<router-outlet></router-outlet>
+
+

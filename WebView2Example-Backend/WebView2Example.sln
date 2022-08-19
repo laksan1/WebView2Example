@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebView2Example", "WebView2Example.csproj", "{B402B0FC-D040-42DF-B012-7E26BCB2AE68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Installer|Any CPU = Installer|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Tests|Any CPU = Tests|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B402B0FC-D040-42DF-B012-7E26BCB2AE68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B402B0FC-D040-42DF-B012-7E26BCB2AE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B402B0FC-D040-42DF-B012-7E26BCB2AE68}.Installer|Any CPU.ActiveCfg = Release|Any CPU
+		{B402B0FC-D040-42DF-B012-7E26BCB2AE68}.Installer|Any CPU.Build.0 = Release|Any CPU
+		{B402B0FC-D040-42DF-B012-7E26BCB2AE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B402B0FC-D040-42DF-B012-7E26BCB2AE68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B402B0FC-D040-42DF-B012-7E26BCB2AE68}.Tests|Any CPU.ActiveCfg = Release|Any CPU
+		{B402B0FC-D040-42DF-B012-7E26BCB2AE68}.Tests|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {84D4213A-CBC0-456E-834C-80E49E8B2AEC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,44 @@
+:host {
+    display: block;
+    width: 100%;
+    padding: 48px 32px;
+    box-sizing: border-box;
+
+    .grid-container {
+        padding: 4px;
+        box-sizing: border-box;
+        border-radius: 2px;
+        border: 1px solid var(--ktd-border-color);
+        background-color: var(--ktd-background-color);
+    }
+
+    ktd-grid {
+        transition: height 500ms ease;
+    }
+
+    ktd-grid-item {
+        box-sizing: border-box;
+        background: #ccc;
+        border: 1px solid black;
+        color: black;
+
+        &.ktd-grid-item-table {
+            padding: 16px;
+            box-sizing: border-box;
+            border: none;
+            background: transparent;
+        }
+    }
+
+    .ktd-grid-img-container {
+        width: 100%;
+        height: 100%;
+        background-color: #e67301;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
