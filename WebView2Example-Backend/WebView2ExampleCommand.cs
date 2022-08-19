@@ -8,18 +8,20 @@ namespace WebView2Example.Model
 {
     [Transaction(TransactionMode.Manual)]
     [Regeneration(RegenerationOption.Manual)]
-    public class WebView2Example : IExternalEventHandler //  Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
+    public class WebView2Example : IExternalCommand  // IExternalEventHandler
     {
-        public void Execute(UIApplication app)
+        public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
             try
             {
-                MainWindow mainWindow = new MainWindow(app);
+                MainWindow mainWindow = new MainWindow(commandData.Application);
                 mainWindow.Show();
+                return Result.Succeeded;
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
+                return Result.Failed;
             }
         }
 

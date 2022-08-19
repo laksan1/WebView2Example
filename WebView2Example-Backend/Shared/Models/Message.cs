@@ -19,7 +19,7 @@ namespace WebView2Example
             this.payload = payload;
         }
 
-        public async static void SendMessage(Microsoft.Web.WebView2.Wpf.WebView2 webView, Message message)
+        public async static void SendMessage(WebView2 webView, Message message)
         {
             try
             {

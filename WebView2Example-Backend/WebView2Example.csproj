@@ -120,7 +120,7 @@
     <Compile Include="Services\RevitService.cs" />
     <Compile Include="Shared\Classes\ModelBase.cs" />
     <Compile Include="Shared\Enums\EventsEnum.cs" />
-    <Compile Include="Shared\Models\Floor.cs" />
+    <Compile Include="Shared\Models\FloorWrapper.cs" />
     <Compile Include="Shared\Helpers\Json.cs" />
     <Compile Include="ExternalEvents\RevitEvent.cs" />
     <Compile Include="WebView2ExampleApp.cs" />
@@ -154,8 +154,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>Set BASE_GIT="C:\git\WebView2Example\WebView2Example-Backend\"
+Set BASE=%25BASE_GIT%25"bin\Debug\"
+Set TARGET_LAUNCH="C:\ProgramData\Autodesk\Revit\Addins\2020\"
+
+echo F|XCOPY %25BASE_GIT%25WebView2Example.addin %25TARGET_LAUNCH%25WebView2Example.addin /Y /I /F
+echo F|XCOPY %25BASE%25WebView2Example.dll %25TARGET_LAUNCH%25WebView2Exampler.dll /Y /I /F
+</PostBuildEvent>
   </PropertyGroup>
   <Import Project="packages\Microsoft.Web.WebView2.1.0.1185.39\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.1185.39\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

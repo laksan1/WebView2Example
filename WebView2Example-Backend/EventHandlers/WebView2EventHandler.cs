@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using WebView2;
 
 namespace WebView2Example
 {
@@ -10,7 +9,7 @@ namespace WebView2Example
         internal static void UpdateFloors(RevitEvent revitEvent, RevitService revitService, object payload)
         {
             string json = JsonConvert.SerializeObject(payload);
-            List<Floor> payloadFloors = JsonConvert.DeserializeObject<List<Floor>>(json);
+            List<FloorWrapper> payloadFloors = JsonConvert.DeserializeObject<List<FloorWrapper>>(json);
 
             revitEvent.Run(app =>
             {

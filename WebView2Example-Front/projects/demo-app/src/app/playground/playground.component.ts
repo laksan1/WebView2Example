@@ -102,7 +102,6 @@ export class KtdPlaygroundComponent implements OnInit, OnDestroy {
     }
 
     onLayoutUpdated(layout: KtdGridLayout) {
-        console.log('onLayoutUpdated layout', layout);
         this.wv2Service.postWebView2Message(EventsEnum.UpdateFloors, layout);
         this.layout = layout;
     }
@@ -166,7 +165,6 @@ export class KtdPlaygroundComponent implements OnInit, OnDestroy {
                 // static: Math.random() < 0.05
             });
         }
-        console.log('layout', layout);
         this.layout = layout;
     }
 

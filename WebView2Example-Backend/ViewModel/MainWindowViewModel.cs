@@ -37,7 +37,7 @@ namespace WebView2Example
             }
         }
 
-        public MainWindowViewModel(UIApplication app, Microsoft.Web.WebView2.Wpf.WebView2 webView)
+        public MainWindowViewModel(UIApplication app, WebView2 webView)
         {
             launchService = new LaunchService(app, webView, this);
         }

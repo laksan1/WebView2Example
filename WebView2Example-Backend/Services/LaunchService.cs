@@ -3,23 +3,20 @@ using Microsoft.Web.WebView2.Core;
 using Microsoft.Web.WebView2.Wpf;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Threading.Tasks;
-using WebView2;
 
 namespace WebView2Example
 {
-    internal class LaunchService
+    public class LaunchService
     {
         private MainWindowViewModel mainWindowViewModel;
-        private Microsoft.Web.WebView2.Wpf.WebView2 webView;
+        private WebView2 webView;
         private RevitEvent revitEvent;
         private RevitService revitService;
 
         internal LaunchService(UIApplication app,
-                             Microsoft.Web.WebView2.Wpf.WebView2 webView,
+                             WebView2 webView,
                              MainWindowViewModel mainWindowViewModel)
         {
             revitService = new RevitService(app);
@@ -30,7 +27,6 @@ namespace WebView2Example
             Task ecwTask = webView.EnsureCoreWebView2Async(null);
             webView.Source = new Uri(uriString);
             webView.WebMessageReceived += new EventHandler<CoreWebView2WebMessageReceivedEventArgs>(ReceiveWebMessage);
-
         }
 
         private void ReceiveWebMessage(object sender, CoreWebView2WebMessageReceivedEventArgs e)
