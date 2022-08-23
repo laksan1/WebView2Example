@@ -8,7 +8,7 @@ namespace WebView2Example.Model
 {
     [Transaction(TransactionMode.Manual)]
     [Regeneration(RegenerationOption.Manual)]
-    public class WebView2Example : IExternalCommand  // IExternalEventHandler
+    public class WebView2Example : IExternalCommand
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {

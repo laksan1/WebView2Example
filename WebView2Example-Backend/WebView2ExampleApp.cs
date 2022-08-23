@@ -30,10 +30,10 @@ namespace WebView2Example
         }
 
         public void AddPushButton(string name,
-                                   string text,
-                                   string tooltip,
-                                   bool toolTipImage,
-                                   RibbonPanel _ribbonPanel)
+                                  string text,
+                                  string tooltip,
+                                  bool toolTipImage,
+                                  RibbonPanel _ribbonPanel)
         {
             try
             {

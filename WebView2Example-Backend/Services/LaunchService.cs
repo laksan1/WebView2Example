@@ -16,8 +16,8 @@ namespace WebView2Example
         private RevitService revitService;
 
         internal LaunchService(UIApplication app,
-                             WebView2 webView,
-                             MainWindowViewModel mainWindowViewModel)
+                               WebView2 webView,
+                               MainWindowViewModel mainWindowViewModel)
         {
             revitService = new RevitService(app);
             this.webView = webView;
