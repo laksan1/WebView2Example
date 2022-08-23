@@ -9,7 +9,7 @@ namespace WebView2Example
         public Action CloseAction { get; set; }
         private LaunchService launchService;
 
-        private int mainWindowHeight = 900;
+        private int mainWindowHeight = 600;
         public int MainWindowHeight
         {
             get
@@ -23,7 +23,7 @@ namespace WebView2Example
             }
         }
 
-        private int mainWindowWidth = 1202;
+        private int mainWindowWidth = 900;
         public int MainWindowWidth
         {
             get
