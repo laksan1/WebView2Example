@@ -15,5 +15,5 @@ Installation.
 7. Open the "WebView2Example-Backend" project
 8. Change the paths in the "build events" (project properties).
 9. Build the project (addin and dll file are copied to the addins folder).
-10. Click the button on the Revit panel "WebView2Example".
+10. Click the button on the Revit panel "WebView2Example" (or TO USE ADD IN MANAGER ) .
 11. Drag and drop rectangles in the window of the revit plugin
