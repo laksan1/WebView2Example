@@ -21,7 +21,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\ProgramData\Autodesk\Revit\Addins\2021\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -45,6 +45,9 @@
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.1185.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Web.WebView2.1.0.1185.39\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms">
+      <HintPath>..\..\..\ProgramData\Autodesk\Revit\Addins\2020\NIKA_RD\Microsoft.Web.WebView2.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.1185.39, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Web.WebView2.1.0.1185.39\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
@@ -159,7 +162,10 @@ Set BASE=%25BASE_GIT%25"bin\Debug\"
 Set TARGET_LAUNCH="C:\ProgramData\Autodesk\Revit\Addins\2021\"
 
 echo F|XCOPY %25BASE_GIT%25WebView2Example.addin %25TARGET_LAUNCH%25WebView2Example.addin /Y /I /F
-echo F|XCOPY %25BASE%25WebView2Example.dll %25TARGET_LAUNCH%25WebView2Example.dll /Y /I /F</PostBuildEvent>
+echo F|XCOPY %25BASE%25WebView2Example.dll %25TARGET_LAUNCH%25WebView2Example.dll /Y /I /F
+echo F|XCOPY %25BASE%25WebView2Example.dll %25TARGET_LAUNCH%25Microsoft.Web.WebView2.Core.dll /Y /I /F
+echo F|XCOPY %25BASE%25WebView2Example.dll %25TARGET_LAUNCH%25Microsoft.Web.WebView2.Wpf.dll /Y /I /F
+echo F|XCOPY %25BASE%25WebView2Example.dll %25TARGET_LAUNCH%25Microsoft.Web.WebView2.WinForms.dll /Y /I /F</PostBuildEvent>
   </PropertyGroup>
   <Import Project="packages\Microsoft.Web.WebView2.1.0.1185.39\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.1185.39\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
