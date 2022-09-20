@@ -156,10 +156,10 @@
   <PropertyGroup>
     <PostBuildEvent>Set BASE_GIT="C:\git\WebView2Example\WebView2Example-Backend\"
 Set BASE=%25BASE_GIT%25"bin\Debug\"
-Set TARGET_LAUNCH="C:\ProgramData\Autodesk\Revit\Addins\2020\"
+Set TARGET_LAUNCH="C:\ProgramData\Autodesk\Revit\Addins\2021\"
 
 echo F|XCOPY %25BASE_GIT%25WebView2Example.addin %25TARGET_LAUNCH%25WebView2Example.addin /Y /I /F
-echo F|XCOPY %25BASE%25WebView2Example.dll %25TARGET_LAUNCH%25WebView2Exampler.dll /Y /I /F</PostBuildEvent>
+echo F|XCOPY %25BASE%25WebView2Example.dll %25TARGET_LAUNCH%25WebView2Example.dll /Y /I /F</PostBuildEvent>
   </PropertyGroup>
   <Import Project="packages\Microsoft.Web.WebView2.1.0.1185.39\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.1185.39\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
